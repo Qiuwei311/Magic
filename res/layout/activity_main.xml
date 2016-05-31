@@ -1,0 +1,249 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ufo.UfoMainActivity" >
+
+    <TextView
+        android:id="@+id/loop_label"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="Loop:" />
+    
+    <EditText
+        android:id="@+id/loop_count"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/edit_text_bg"
+        android:layout_toRightOf="@+id/loop_label"
+        android:layout_marginLeft="4dp"
+        android:hint=""
+        android:singleLine="true"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"/>       
+    
+    <TextView
+        android:id="@+id/label_x"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_toRightOf="@+id/loop_count"
+        android:layout_marginLeft="20dp"
+        android:text="X:" />
+    
+    <EditText
+        android:id="@+id/location_x"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/edit_text_bg"
+        android:layout_toRightOf="@+id/label_x"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:hint=""
+        android:singleLine="true"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/label_y"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"        
+        android:layout_toRightOf="@+id/location_x"
+        android:layout_marginLeft="10dp"
+        android:text="Y:" />
+    
+    <EditText
+        android:id="@+id/location_y"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/edit_text_bg"
+        android:layout_toRightOf="@+id/label_y"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:hint=""
+        android:singleLine="true"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/label_y1"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"        
+        android:layout_toRightOf="@+id/location_y"
+        android:layout_marginLeft="10dp"
+        android:text="Y1:" />
+    
+    <EditText
+        android:id="@+id/location_y1"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/edit_text_bg"
+        android:layout_toRightOf="@+id/label_y1"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:hint=""
+        android:singleLine="true"
+        android:textColor="@android:color/black"/>
+    <CheckBox 
+        android:id="@+id/use_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/location_y1"
+        android:checked="false"/>"
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignBaseline="@+id/reset"
+        android:layout_alignBottom="@+id/reset"
+        android:layout_alignParentLeft="true"
+        android:textSize="12sp"
+        android:text="START" />
+    
+    <TextView 
+        android:id="@+id/current_loop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/reset"
+        android:layout_alignBottom="@+id/reset"
+        android:layout_centerHorizontal="true"/>"
+    
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/loop_label"
+        android:textSize="12sp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:text="RESET" />
+    
+   <LinearLayout
+       android:id="@+id/url1_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reset"
+        android:orientation="horizontal" >
+         
+        <TextView
+            android:id="@+id/url_label1"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="URL1:" />
+    
+        <EditText
+            android:id="@+id/url1_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="8dp"
+            android:textSize="14sp"
+            android:hint=""
+            android:singleLine="true"
+            android:textColor="@android:color/black"/>
+        
+        <ImageView
+            android:id="@+id/clear_input1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clear_input"
+            android:contentDescription="@string/app_name" /> 
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/url2_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/url1_layout"
+        android:focusable="true"  
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+         
+        <TextView
+            android:id="@+id/url_label2"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="URL2:" />
+    
+        <EditText
+            android:id="@+id/url2_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="8dp"
+            android:textSize="14sp"
+            android:hint=""
+            android:singleLine="true"
+            android:textColor="@android:color/black"/>
+        
+        <ImageView
+            android:id="@+id/clear_input2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clear_input"
+            android:contentDescription="@string/app_name" /> 
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/url3_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/url2_layout"
+        android:orientation="horizontal" >
+         
+        <TextView
+            android:id="@+id/url_label3"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="URL3:" />
+    
+        <EditText
+            android:id="@+id/url3_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="8dp"
+            android:textSize="14sp"
+            android:hint=""
+            android:singleLine="true"
+            android:textColor="@android:color/black"/>
+        
+        <ImageView
+            android:id="@+id/clear_input3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clear_input"
+            android:contentDescription="@string/app_name" /> 
+    </LinearLayout>
+    
+    
+    <WebView
+        android:id="@+id/network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/url3_layout"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>
