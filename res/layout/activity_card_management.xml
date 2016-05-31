@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/item_white_bg" >
+
+        <ImageView
+            android:id="@+id/bank_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_gongshang" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/bank_icon"
+            android:text="XXX Bank"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/card_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/bank_name"
+            android:layout_below="@+id/bank_name"
+            android:text="尾号 1212" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/item_white_bg"
+        android:orientation="vertical" >
+    <!-- 还款提醒 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="22dp"
+            android:layout_weight="2"
+            android:textColor="@android:color/black"
+            android:text="还款提醒"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/auto_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"           
+            android:layout_marginRight="6dp"
+            android:background="@android:color/transparent"
+            android:button="@drawable/switch_btn_bg"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn="" >
+        </ToggleButton>
+    </LinearLayout>
+        
+    <!-- 设置还款日 -->
+    <LinearLayout
+        android:id="@+id/payment_date_settings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/item_white_bg_1"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+            
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:textColor="@android:color/black"
+            android:text="设置还款日"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/darker_gray"
+            android:text="每月10日"
+            android:textSize="14sp" >
+        </TextView>
+        
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center_vertical" 
+            android:src="@drawable/ic_arrow_right">
+        </ImageView>
+    </LinearLayout>
+    </LinearLayout>  
+
+    <!-- 设置账单日 -->
+    <LinearLayout
+        android:id="@+id/bill_date_settings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/item_white_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:paddingLeft="20dp"
+            android:textColor="@android:color/black"
+            android:text="设置账单日"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/darker_gray"
+            android:text="每月10日"
+            android:textSize="14sp" >
+        </TextView>
+        
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center_vertical" 
+            android:src="@drawable/ic_arrow_right">
+        </ImageView>
+    </LinearLayout>    
+    
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/item_white_bg"        
+        android:textColor="@android:color/holo_red_light"
+        android:gravity="center"
+        android:text="删除"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

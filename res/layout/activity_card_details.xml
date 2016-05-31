@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_details_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:id="@+id/card_info"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#4D7EBC">
+        
+        <ImageView
+	        android:id="@+id/bank_icon"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp"
+	        android:src="@drawable/icon_gongshang"
+	        android:contentDescription="@string/app_name">
+        </ImageView>
+        
+	    <TextView 
+	        android:id="@+id/bank_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentTop="true"        
+	        android:layout_toRightOf="@+id/bank_icon"
+	        android:layout_marginTop="12dp"
+	        android:layout_marginLeft="12dp"
+	        android:textColor="@android:color/white"
+	        android:textSize="16sp"
+	        android:text="XXX Bank" />
+        
+	    <TextView 
+	        android:id="@+id/card_number"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/bank_name"
+	        android:layout_below="@+id/bank_name"
+	        android:layout_marginTop="8dp"
+	        android:textColor="@android:color/white"
+	        android:textSize="20sp"
+	        android:text="* * * *  * * * *  * * * *  1212"  /> 
+        
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:clickable="true"        
+        android:orientation="vertical">
+        
+       <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="64dp"
+	        android:orientation="horizontal">
+            <include
+                android:id="@+id/item1"                
+                layout="@layout/details_grid_item_layout" />
+            <View 
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>            
+            <include
+                android:id="@+id/item2"                
+                layout="@layout/details_grid_item_layout" />
+        </LinearLayout>
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal">
+            <include
+                android:id="@+id/item3"
+                layout="@layout/details_grid_item_layout" />
+            <View 
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>            
+            <include
+                android:id="@+id/item4"
+                layout="@layout/details_grid_item_layout" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <com.five.bill.view.PinnedHeaderListView
+		android:id="@+id/bill_listview"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="16dp"
+		android:fadingEdge="none" />
+    
+</LinearLayout>

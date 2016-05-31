@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/header_view" 
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/actionbar_bg"
+        android:orientation="horizontal">
+        
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="2016年"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+        <View 
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/darker_gray"/>    
+        <TextView
+            android:id="@+id/expenditure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="支出(元)"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+        
+        <TextView
+            android:id="@+id/income"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="收入(元)"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/tab_button_bg"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:id="@+id/detail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/tab_button_bg_1"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="明细"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+        
+        <View 
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/detail_tab_bg"/>   
+        
+        <TextView 
+            android:id="@+id/reprot_forms"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="报表"
+            android:textSize="16sp" />
+        
+        <View 
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/detail_tab_bg"/>  
+        
+        <TextView 
+            android:id="@+id/account"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="账号"
+            android:textSize="16sp" />"
+        
+    </LinearLayout>
+    
+    <com.five.bill.view.PinnedHeaderListView
+        android:id="@+id/bill_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:fadingEdge="none" />
+    
+
+</LinearLayout>

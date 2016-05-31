@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/item_white_bg"
+        android:orientation="vertical" >
+        
+        <!-- 卡号  -->
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:orientation="horizontal" >
+	
+	        <TextView
+	            android:layout_width="80dp"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:paddingLeft="20dp"
+	            android:textColor="@android:color/black"
+	            android:text="卡号"
+	            android:textSize="16sp"
+	            android:textStyle="bold" />
+	        
+	        <EditText 
+	            android:id="@+id/card_number"
+	            android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:inputType="text"
+                android:background="@null"
+                android:hint="信用卡号"
+                android:textSize="16sp" />
+	    </LinearLayout>
+	    <View 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/main_content_bg"/>    
+        <!-- 银行  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+    
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textColor="@android:color/black"
+                android:text="银行"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            
+           <EditText 
+                android:id="@+id/bank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:inputType="text"
+                android:background="@null"
+                android:clickable="false"
+                android:hint="选择发卡银行"
+                android:textSize="16sp" />
+            
+	        <ImageView
+	            android:layout_width="36dp"
+	            android:layout_height="36dp"
+	            android:layout_marginTop="1dp"
+	            android:layout_marginRight="6dp"
+	            android:layout_gravity="center_vertical" 
+	            android:src="@drawable/ic_arrow_right">
+            </ImageView>
+        </LinearLayout> 
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/main_content_bg"/>          
+        <!-- 姓名 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+    
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textColor="@android:color/black"
+                android:text="姓名"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            
+            <EditText 
+                android:id="@+id/my_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:hint="持卡人姓名"
+                android:background="@null"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <!-- 账单日 / 还款日 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/item_white_bg"
+        android:orientation="vertical" >
+        <!-- 账单日  -->
+        <LinearLayout
+            android:id="@+id/statement_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal" >
+                
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:textColor="@android:color/black"
+                android:text="账单日"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+    
+            <TextView
+                android:id="@+id/statement_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/darker_gray"
+                android:text="每月10日"
+                android:textSize="14sp" >
+            </TextView>
+            
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="6dp"
+                android:layout_gravity="center_vertical" 
+                android:src="@drawable/ic_arrow_right">
+            </ImageView>
+        </LinearLayout> 
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/main_content_bg"/>          
+        <!-- 还款日 -->
+        <LinearLayout
+            android:id="@+id/payment_due_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal" >
+                
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:textColor="@android:color/black"
+                android:text="还款日"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+    
+            <TextView
+                android:id="@+id/payment_due_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/darker_gray"
+                android:text="每月10日"
+                android:textSize="14sp" >
+            </TextView>
+            
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="6dp"
+                android:layout_gravity="center_vertical" 
+                android:src="@drawable/ic_arrow_right">
+            </ImageView>
+        </LinearLayout>   
+    </LinearLayout>
+    
+    <!-- 还款提醒 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/item_white_bg"
+        android:orientation="vertical" >
+	    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:orientation="horizontal" >
+	
+	        <TextView
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:paddingLeft="22dp"
+	            android:layout_weight="2"
+	            android:textColor="@android:color/black"
+	            android:text="还款提醒"
+	            android:textSize="16sp"
+	            android:textStyle="bold" />
+	
+	        <ToggleButton
+	            android:id="@+id/auto_notify"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"           
+	            android:layout_marginRight="6dp"
+	            android:background="@android:color/transparent"
+	            android:button="@drawable/switch_btn_bg"
+	            android:checked="false"
+	            android:text=""
+	            android:textOff=""
+	            android:textOn="" >
+	        </ToggleButton>
+	    </LinearLayout>
+        
+	    <!-- 设置还款日 -->
+	    <LinearLayout
+	        android:id="@+id/payment_notify_settings"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginLeft="20dp"
+	        android:background="@drawable/item_white_bg_1"
+	        android:visibility="gone"
+	        android:orientation="horizontal" >
+	            
+	        <TextView
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight="2"
+	            android:textColor="@android:color/black"
+	            android:text="提醒日"
+	            android:textSize="16sp"
+	            android:textStyle="bold" />
+	
+	        <TextView
+	            android:id="@+id/payment_notify_date"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:textColor="@android:color/darker_gray"
+	            android:text="每月10日"
+	            android:textSize="14sp" >
+	        </TextView>
+	        
+	        <ImageView
+	            android:layout_width="36dp"
+	            android:layout_height="36dp"
+	            android:layout_marginTop="1dp"
+	            android:layout_marginRight="6dp"
+	            android:layout_gravity="center_vertical" 
+	            android:src="@drawable/ic_arrow_right">
+	        </ImageView>
+	    </LinearLayout>
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/button_bg"        
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:text="确定"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</LinearLayout>
