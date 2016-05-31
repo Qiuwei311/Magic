@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     package="com.five.bill"
+=======
+    package="com.five.magic"
+>>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
+<<<<<<< HEAD
         android:minSdkVersion="17"
         android:targetSdkVersion="21" />
+=======
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+>>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
 
     <application
         android:allowBackup="true"
@@ -22,6 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
 
         <activity
             android:name=".CardListActivity"
@@ -46,6 +58,8 @@
             android:name="com.five.bill.BillProvider"
             android:authorities="com.five.bill.provider"
             android:exported="false" />
+=======
+>>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
     </application>
 
 </manifest>
