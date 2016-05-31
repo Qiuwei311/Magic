@@ -4,11 +4,6 @@ int anim abc_slide_in_bottom 0x7f040002
 int anim abc_slide_in_top 0x7f040003
 int anim abc_slide_out_bottom 0x7f040004
 int anim abc_slide_out_top 0x7f040005
-<<<<<<< HEAD
-int anim dialog_bottom_enter 0x7f040006
-int anim dialog_bottom_exit 0x7f040007
-=======
->>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
 int attr actionBarDivider 0x7f01000f
 int attr actionBarItemBackground 0x7f010010
 int attr actionBarSize 0x7f01000e
@@ -125,7 +120,6 @@ int bool abc_config_actionMenuItemAllCaps 0x7f050005
 int bool abc_config_allowActionMenuItemTextWithIcon 0x7f050004
 int bool abc_config_showMenuShortcutsWhenKeyboardPresent 0x7f050003
 int bool abc_split_action_bar_is_narrow 0x7f050002
-<<<<<<< HEAD
 int color abc_search_url_text_holo 0x7f06000a
 int color abc_search_url_text_normal 0x7f060000
 int color abc_search_url_text_pressed 0x7f060002
@@ -137,12 +131,6 @@ int color button_gray_bg 0x7f060008
 int color detail_tab_bg 0x7f060009
 int color main_content_bg 0x7f060004
 int color text_gray_bg 0x7f060005
-=======
-int color abc_search_url_text_holo 0x7f060003
-int color abc_search_url_text_normal 0x7f060000
-int color abc_search_url_text_pressed 0x7f060002
-int color abc_search_url_text_selected 0x7f060001
->>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
 int dimen abc_action_bar_default_height 0x7f070002
 int dimen abc_action_bar_icon_vertical_padding 0x7f070003
 int dimen abc_action_bar_progress_bar_size 0x7f07000a
@@ -253,36 +241,11 @@ int drawable abc_textfield_searchview_holo_dark 0x7f020053
 int drawable abc_textfield_searchview_holo_light 0x7f020054
 int drawable abc_textfield_searchview_right_holo_dark 0x7f020055
 int drawable abc_textfield_searchview_right_holo_light 0x7f020056
-<<<<<<< HEAD
-int drawable add_card_bg 0x7f020057
-int drawable button_bg 0x7f020058
-int drawable button_corners_blue_bg 0x7f020059
-int drawable button_corners_blue_pressed_bg 0x7f02005a
-int drawable button_corners_gray_bg 0x7f02005b
-int drawable card_details_bg 0x7f02005c
-int drawable custom_card_corners_bg 0x7f02005d
-int drawable ic_arrow_left 0x7f02005e
-int drawable ic_arrow_right 0x7f02005f
-int drawable ic_launcher 0x7f020060
-int drawable icon_gongshang 0x7f020061
-int drawable item_white_bg 0x7f020062
-int drawable item_white_bg_1 0x7f020063
-int drawable phone_public_toggle_off 0x7f020064
-int drawable phone_public_toggle_on 0x7f020065
-int drawable switch_btn_bg 0x7f020066
-int drawable tab_button_bg 0x7f020067
-int drawable tab_button_bg_1 0x7f020068
-int drawable tab_button_bg_2 0x7f020069
-int drawable transparent 0x7f02006a
-int drawable white_bg 0x7f02006b
-int id account 0x7f090063
-=======
 int drawable edit_text_bg 0x7f020057
 int drawable edit_text_focused 0x7f020058
 int drawable edit_text_normal 0x7f020059
 int drawable ic_clear_input 0x7f02005a
 int drawable ic_launcher 0x7f02005b
->>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
 int id action_bar 0x7f09001c
 int id action_bar_activity_content 0x7f090001
 int id action_bar_container 0x7f09001b
@@ -294,33 +257,6 @@ int id action_context_bar 0x7f09001d
 int id action_menu_divider 0x7f090002
 int id action_menu_presenter 0x7f090003
 int id action_mode_close_button 0x7f090024
-<<<<<<< HEAD
-int id action_settings 0x7f09006d
-int id actionbar 0x7f09003c
-int id activity_chooser_view_content 0x7f090025
-int id add_card 0x7f090058
-int id always 0x7f09000f
-int id auto_notify 0x7f090049
-int id bank 0x7f090043
-int id bank_icon 0x7f09004f
-int id bank_name 0x7f090050
-int id beginning 0x7f090016
-int id bill_date_settings 0x7f09005a
-int id bill_listview 0x7f090055
-int id card_details_layout 0x7f09004d
-int id card_info 0x7f09004e
-int id card_number 0x7f090042
-int id checkbox 0x7f09002d
-int id collapseActionView 0x7f090010
-int id confirm 0x7f09004c
-int id current_debt 0x7f090065
-int id date 0x7f090064
-int id default_activity_button 0x7f090028
-int id delete 0x7f09005b
-int id detail 0x7f090061
-int id detail_layout 0x7f090067
-int id details 0x7f09006a
-=======
 int id action_settings 0x7f090055
 int id activity_chooser_view_content 0x7f090025
 int id always 0x7f09000f
@@ -332,7 +268,6 @@ int id clear_input3 0x7f090053
 int id collapseActionView 0x7f090010
 int id current_loop 0x7f090047
 int id default_activity_button 0x7f090028
->>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
 int id dialog 0x7f090014
 int id disableHome 0x7f090009
 int id dropdown 0x7f090015
@@ -340,48 +275,11 @@ int id edit_query 0x7f090030
 int id end 0x7f090017
 int id expand_activities_button 0x7f090026
 int id expanded_menu 0x7f09002c
-<<<<<<< HEAD
-int id expenditure 0x7f09005e
-int id header_view 0x7f09005c
-=======
->>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
 int id home 0x7f090000
 int id homeAsUp 0x7f09000a
 int id icon 0x7f09002a
 int id ifRoom 0x7f090011
 int id image 0x7f090027
-<<<<<<< HEAD
-int id income 0x7f09005f
-int id item1 0x7f090051
-int id item2 0x7f090052
-int id item3 0x7f090053
-int id item4 0x7f090054
-int id left_action 0x7f09003e
-int id left_icon 0x7f09003d
-int id listMode 0x7f090006
-int id list_item 0x7f090029
-int id main_content 0x7f090041
-int id middle 0x7f090018
-int id month 0x7f09005d
-int id my_name 0x7f090044
-int id never 0x7f090012
-int id none 0x7f090019
-int id normal 0x7f090007
-int id payment_date 0x7f090066
-int id payment_date_settings 0x7f090059
-int id payment_due_date 0x7f090048
-int id payment_due_date_layout 0x7f090047
-int id payment_notify_date 0x7f09004b
-int id payment_notify_settings 0x7f09004a
-int id progress_circular 0x7f090004
-int id progress_horizontal 0x7f090005
-int id radio 0x7f09002f
-int id reprot_forms 0x7f090062
-int id right_action 0x7f090040
-int id right_icon 0x7f09003f
-int id scrollView 0x7f090056
-int id scroll_content 0x7f090057
-=======
 int id label_x 0x7f09003e
 int id label_y 0x7f090040
 int id label_y1 0x7f090042
@@ -401,7 +299,6 @@ int id progress_circular 0x7f090004
 int id progress_horizontal 0x7f090005
 int id radio 0x7f09002f
 int id reset 0x7f090046
->>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
 int id search_badge 0x7f090032
 int id search_bar 0x7f090031
 int id search_button 0x7f090033
@@ -412,29 +309,11 @@ int id search_mag_icon 0x7f090035
 int id search_plate 0x7f090036
 int id search_src_text 0x7f090037
 int id search_voice_btn 0x7f09003b
-<<<<<<< HEAD
-int id settled_bills 0x7f090069
-=======
->>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
 int id shortcut 0x7f09002e
 int id showCustom 0x7f09000b
 int id showHome 0x7f09000c
 int id showTitle 0x7f09000d
 int id split_action_bar 0x7f09001e
-<<<<<<< HEAD
-int id statement_date 0x7f090046
-int id statement_date_layout 0x7f090045
-int id submit_area 0x7f090039
-int id tabMode 0x7f090008
-int id tabs 0x7f090060
-int id textItem 0x7f09006b
-int id textItem2 0x7f09006c
-int id title 0x7f09002b
-int id top_action_bar 0x7f090020
-int id unsettled_bills 0x7f090068
-int id up 0x7f090021
-int id useLogo 0x7f09000e
-=======
 int id start 0x7f090045
 int id submit_area 0x7f090039
 int id tabMode 0x7f090008
@@ -452,7 +331,6 @@ int id url_label2 0x7f09004d
 int id url_label3 0x7f090051
 int id useLogo 0x7f09000e
 int id use_mobile 0x7f090044
->>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
 int id withText 0x7f090013
 int integer abc_max_action_buttons 0x7f080000
 int layout abc_action_bar_decor 0x7f030000
@@ -479,27 +357,10 @@ int layout abc_popup_menu_item_layout 0x7f030014
 int layout abc_search_dropdown_item_icons_2line 0x7f030015
 int layout abc_search_view 0x7f030016
 int layout abc_simple_decor 0x7f030017
-<<<<<<< HEAD
-int layout activity_base 0x7f030018
-int layout activity_card_add 0x7f030019
-int layout activity_card_details 0x7f03001a
-int layout activity_card_list 0x7f03001b
-int layout activity_card_management 0x7f03001c
-int layout activity_main 0x7f03001d
-int layout bill_list_header_layout 0x7f03001e
-int layout bill_list_item_layout 0x7f03001f
-int layout bottom_dialog_layout 0x7f030020
-int layout costom_card_item 0x7f030021
-int layout details_grid_item_layout 0x7f030022
-int layout header_item 0x7f030023
-int layout list_item 0x7f030024
-int layout support_simple_spinner_dropdown_item 0x7f030025
-int menu card_list 0x7f0c0000
-=======
 int layout activity_main 0x7f030018
 int layout support_simple_spinner_dropdown_item 0x7f030019
-int menu main 0x7f0c0000
->>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
+int menu card_list 0x7f0c0000
+int menu main 0x7f0c0001
 int string abc_action_bar_home_description 0x7f0a0001
 int string abc_action_bar_up_description 0x7f0a0002
 int string abc_action_menu_overflow_description 0x7f0a0003
@@ -518,11 +379,6 @@ int string app_name 0x7f0a000d
 int string hello_world 0x7f0a000e
 int style AppBaseTheme 0x7f0b008b
 int style AppTheme 0x7f0b008c
-<<<<<<< HEAD
-int style DialogBottomStyle 0x7f0b008d
-int style GlobalDialogAnimation 0x7f0b008e
-=======
->>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f0b0063
 int style TextAppearance_AppCompat_Base_SearchResult 0x7f0b006d
 int style TextAppearance_AppCompat_Base_SearchResult_Subtitle 0x7f0b006f

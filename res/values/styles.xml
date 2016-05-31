@@ -16,24 +16,5 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-<<<<<<< HEAD
-    
-    <style name="DialogBottomStyle" parent="android:Animation">
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:backgroundDimEnabled">false</item>
-        <item name="android:windowSoftInputMode">adjustPan</item>
-    </style>  
-    
-    <style name="GlobalDialogAnimation" >          
-        <item name="android:windowEnterAnimation">@anim/dialog_bottom_enter</item>     
-        <item name="android:windowExitAnimation">@anim/dialog_bottom_exit</item>     
-    </style>
-=======
->>>>>>> 6ea6cc8bd9ca5a4a2cef4b1a83c457fed946a9bb
 
 </resources>

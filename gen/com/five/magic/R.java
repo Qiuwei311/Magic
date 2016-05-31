@@ -858,10 +858,17 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f050002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f060003;
+        public static final int abc_search_url_text_holo=0x7f06000a;
         public static final int abc_search_url_text_normal=0x7f060000;
         public static final int abc_search_url_text_pressed=0x7f060002;
         public static final int abc_search_url_text_selected=0x7f060001;
+        public static final int actionbar_bg=0x7f060003;
+        public static final int button_blue_bg=0x7f060006;
+        public static final int button_blue_pressed_bg=0x7f060007;
+        public static final int button_gray_bg=0x7f060008;
+        public static final int detail_tab_bg=0x7f060009;
+        public static final int main_content_bg=0x7f060004;
+        public static final int text_gray_bg=0x7f060005;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -1225,7 +1232,8 @@ containing a value of this type.
         public static final int support_simple_spinner_dropdown_item=0x7f030019;
     }
     public static final class menu {
-        public static final int main=0x7f0c0000;
+        public static final int card_list=0x7f0c0000;
+        public static final int main=0x7f0c0001;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
