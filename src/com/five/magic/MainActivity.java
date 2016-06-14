@@ -30,6 +30,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * 
+ * WebView 加载路由器设置首页， 设置相应的点击坐标，运行次数
+ * 
+ * Step:
+ * 1. 配置路由器地址
+ * 2. 配置路由器 断开/连接/刷新 的坐标
+ * 3. 将连接地址填到URL栏，并点击右上角菜单进行保存
+ * 4. 输入运行次数，点击START
+ *
+ */
 public class MainActivity extends ActionBarActivity {
 
 	private SharedPreferences mPrefs;
@@ -49,13 +60,10 @@ public class MainActivity extends ActionBarActivity {
 	private int mMaxLoop;
 	private int mCurrentLoop;
 	private int mOneLoopCount;
-	private int mTotalURL;
 	private boolean mPageLoaded;
-	// private boolean isETRunning = false;
-	// private boolean isET2Running = false;
 	private boolean mAirPlaneOn = false;
 	private boolean oneLoopRunning = false;
-	private ArrayList<String> urlList = new ArrayList<String>();
+	private ArrayList<String> mUrlList = new ArrayList<String>();
 
 	private static final int OPERATION_CLICK_CLOSE = 10;
 	private static final int OPERATION_CLICK_OPEN = 20;
@@ -84,7 +92,7 @@ public class MainActivity extends ActionBarActivity {
 			        operationClick(AIRPLANE_STEP_1, 1, 1);
 			        operationClick(AIRPLANE_STEP_2, 1, 3);  
 			    } else {
-			        doClick("Network close", mX + " " + mY);
+			        doClick("Network close", mX + " " + mY); // 488 1120
 			        operationClick(OPERATION_CLICK_OPEN, 5);
 			    }
 				break;
@@ -95,12 +103,12 @@ public class MainActivity extends ActionBarActivity {
 	                operationClick(AIRPLANE_STEP_2, 0, 3);
 	                operationClick(START_ET_ACTIVITY, 8);
 	            } else {
-	                doClick("Network open", mX + " " + mY); // 535 885
+	                doClick("Network open", mX + " " + mY); // 488 1120
 	                operationClick(NET_REFRESH, 5);
 	            }
 				break;
 			case NET_REFRESH:
-	            doClick("Network refresh", mX + " " + mY1); // 535 1030
+	            doClick("Network refresh", mX + " " + mY1); // 993 1120
 	            operationClick(START_ET_ACTIVITY, 3);
 				break;
 			case START_ET_ACTIVITY:
@@ -126,7 +134,6 @@ public class MainActivity extends ActionBarActivity {
     }
     
     private void setAirplaneMode1(int flag) {
-        Log.e("CQW", "setAirplaneMode1 = " + flag);
         List<String> cmds = new ArrayList<String>();
         cmds.clear();
         cmds.add("settings put global airplane_mode_on " + flag);  
@@ -138,7 +145,6 @@ public class MainActivity extends ActionBarActivity {
     }
     
     private void setAirplaneMode2(int flag) {
-        Log.e("CQW", "setAirplaneMode2 = " + flag);
         List<String> cmds = new ArrayList<String>();
         cmds.clear();
         cmds.add("/system/bin/am broadcast -a android.intent.action.AIRPLANE_MODE --ez state " + (flag == 1 ? "true" : "false"));  
@@ -190,6 +196,7 @@ public class MainActivity extends ActionBarActivity {
 		mLocationX = (EditText) findViewById(R.id.location_x);
 		mLocationY = (EditText) findViewById(R.id.location_y);
 		mLocationY1 = (EditText) findViewById(R.id.location_y1);
+		// 设置默认坐标
 		if (mX.equals("") || mY.equals("")) {
 		    mX = "488";
 		    mY = "993";
@@ -209,16 +216,14 @@ public class MainActivity extends ActionBarActivity {
 				String loop = mLoopCount.getText().toString();
 				mMaxLoop = Integer.parseInt(loop);
 				mCurrentLoop = 1;
-				// isET2Running = false;
 				oneLoopRunning = true;
 				updateCurrentLoop();
 
-				// if (mPageLoaded) {
 				mOneLoopCount = 0;
-				mURL = urlList.get(mOneLoopCount);
+				mURL = mUrlList.get(mOneLoopCount);
 				operationClick(OPERATION_CLICK_CLOSE, 1);
-				Log.e("CQW", "--------Start-------");
-				// }
+				mStart.setClickable(false);
+				Log.e("CQW", "--------Start running-------");
 			}
 		});
 
@@ -228,6 +233,7 @@ public class MainActivity extends ActionBarActivity {
 			public void onClick(View view) {
 				mCurrentLoop = 0;
 				mLoopCount.setText("");
+				mStart.setClickable(true);
 			}
 		});
 
@@ -240,19 +246,9 @@ public class MainActivity extends ActionBarActivity {
 		loadURL("url1", mURLText1, url_text1);
 		loadURL("url2", mURLText2, url_text2);
 		loadURL("url3", mURLText3, url_text3);
-
-		mURL1 = mURLText1.getText().toString();
-		mURL2 = mURLText2.getText().toString();
-		mURL3 = mURLText3.getText().toString();
-		if (!mURL1.equals("")) {
-			urlList.add(mURL1);
-		}
-		if (!mURL2.equals("")) {
-			urlList.add(mURL2);
-		}
-		if (!mURL3.equals("")) {
-			urlList.add(mURL3);
-		}
+		
+        mUrlList.clear();
+        loadUrlList();
 
 		mClear1 = (ImageView) findViewById(R.id.clear_input1);
 		mClear1.setOnClickListener(new View.OnClickListener() {
@@ -277,7 +273,8 @@ public class MainActivity extends ActionBarActivity {
 		});
 
 		mNetwork = (WebView) findViewById(R.id.network);
-		mNetwork.loadUrl("http://tplogin.cn"); // tplogin.cn
+		// 路由器地址: tplogin.cn 或  192.168.1.254
+		mNetwork.loadUrl("http://tplogin.cn"); 
 		mNetwork.setWebViewClient(new WebViewClient() {
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -302,7 +299,6 @@ public class MainActivity extends ActionBarActivity {
 
 				if (newProgress == 100) {
 					mPageLoaded = true;
-					Log.e("CQW", "Net page loading done : " + newProgress);
 				} else {
 					mPageLoaded = false;
 				}
@@ -315,8 +311,8 @@ public class MainActivity extends ActionBarActivity {
 		super.onResume();
 
 		if (oneLoopRunning) {
-			if (mOneLoopCount < urlList.size()) {
-				mURL = urlList.get(mOneLoopCount);
+			if (mOneLoopCount < mUrlList.size()) {
+				mURL = mUrlList.get(mOneLoopCount);
 				operationClick(START_ET_ACTIVITY, 3);
 			} else {
 			    mOneLoopCount = 0;
@@ -330,6 +326,10 @@ public class MainActivity extends ActionBarActivity {
 						operationClick(OPERATION_CLICK_CLOSE, 3);
 					}
 					updateCurrentLoop();					
+				} else {
+				    // 运行结束
+				    mStart.setClickable(true);
+				    Log.e("CQW", "-------- END -------");
 				}
 			}
 		}
@@ -338,7 +338,7 @@ public class MainActivity extends ActionBarActivity {
 	private void startEtActivity() {
 		try {
             Log.e("CQW", "mOneLoopCount = " + mOneLoopCount);
-            mURL = urlList.get(mOneLoopCount);
+            mURL = mUrlList.get(mOneLoopCount);
 			mOneLoopCount++;
 			ComponentName componentName = new ComponentName("com.example.et3",
 			        "com.example.et3.MainActivity");
@@ -356,7 +356,7 @@ public class MainActivity extends ActionBarActivity {
 	private void updateCurrentLoop() {
 		mCurrentLoopView.setText("Current: " + mCurrentLoop);
 	}
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main, menu);
@@ -390,6 +390,9 @@ public class MainActivity extends ActionBarActivity {
 			editor.putString("url2", url2);
 			editor.putString("url3", url3);
 			editor.commit();
+			
+			mUrlList.clear();
+			loadUrlList();
 
 			return true;
 		}
@@ -411,6 +414,21 @@ public class MainActivity extends ActionBarActivity {
 			}
 		}
 	}
+
+    private void loadUrlList() {
+        mURL1 = mURLText1.getText().toString();
+        mURL2 = mURLText2.getText().toString();
+        mURL3 = mURLText3.getText().toString();
+        if (!mURL1.equals("")) {
+            mUrlList.add(mURL1);
+        }
+        if (!mURL2.equals("")) {
+            mUrlList.add(mURL2);
+        }
+        if (!mURL3.equals("")) {
+            mUrlList.add(mURL3);
+        }
+    }
 	
     private String formatURL(String url) {
         String u = "";
